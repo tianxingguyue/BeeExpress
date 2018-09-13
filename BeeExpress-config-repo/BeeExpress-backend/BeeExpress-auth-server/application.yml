@@ -18,11 +18,11 @@ BeeExpress:
       port: ${BeeExpress.mysql.port}
       url: jdbc:mysql://${BeeExpress.mysql.admin.host}:${BeeExpress.mysql.admin.port}/${BeeExpress.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
       username: ${BeeExpress.mysql.username}
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
     host: BeeExpress.mysql.host             # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: bNVOqb7WKLX5Bjnw+LMv92taj25KOxDimXxILPQjw42wgv+1lHzOH8kr97xDwWdhpY67QuYCS7sWN4W46YbkFA==
+    password: lzl123
 
 spring:
   application:
@@ -40,17 +40,17 @@ spring:
     default-property-inclusion: non_null
   redis:
     key-prefix: dev
-    host: BeeExpress.redis.host
+    host: 192.168.1.118
     pool:
       max-active: 100
       min-idle: 2
       max-idle: 8
       max-wait: 100
-  rabbitmq:
-    host: BeeExpress.rabbitmq.host
-    port: 5672
-    username: guest
-    password: guest
+  #rabbitmq:
+   # host: BeeExpress.rabbitmq.host
+    #port: 5672
+    #username: guest
+    #password: guest
   zipkin:
 #    base-url: http://BeeExpress-zipkin:8510
     locator:
@@ -100,7 +100,7 @@ eureka:
 management:
   security:
     enabled: true
-  context-path: /mgmt
+  context-path: /bee
 
 security:
   basic:
