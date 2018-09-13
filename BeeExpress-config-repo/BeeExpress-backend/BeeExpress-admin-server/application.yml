@@ -31,13 +31,13 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
     default-property-inclusion: non_null
-  rabbitmq:
-    host: BeeExpress.rabbitmq.host
-    port: 5672
-    password: guest
-    username: guest
+  #rabbitmq:
+   # host: BeeExpress.rabbitmq.host
+    #port: 5672
+    #password: guest
+    #username: guest
   redis:
-    host: BeeExpress.redis.host
+    host: 192.168.1.118
     port: 6379
     pool:
       max-active: 20
@@ -65,7 +65,7 @@ spring:
 management:
   security:
     enabled: true
-  context-path: /mgmt
+  context-path: /bee
 
 security:
   basic:
@@ -92,12 +92,12 @@ BeeExpress:
       port: ${BeeExpress.mysql.port}
       url: jdbc:mysql://${BeeExpress.mysql.admin.host}:${BeeExpress.mysql.admin.port}/${BeeExpress.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
       username: ${BeeExpress.mysql.username}
-    driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
-#    driverClassName: com.mysql.jdbc.Driver    # 5.x
+    #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
+    driverClassName: com.mysql.jdbc.Driver    # 5.x
     host: BeeExpress.mysql.host     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: bNVOqb7WKLX5Bjnw+LMv92taj25KOxDimXxILPQjw42wgv+1lHzOH8kr97xDwWdhpY67QuYCS7sWN4W46YbkFA==
+    password: lzl123
 
 
 feign:
