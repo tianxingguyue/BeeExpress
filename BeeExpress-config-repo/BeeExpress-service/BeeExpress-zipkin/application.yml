@@ -23,7 +23,7 @@ spring:
     url: jdbc:mysql://BeeExpress.mysql.host:3306/beeexpress_zipkin_dev?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
     username: root
     password: lzl123     # 这里不需要加密
-    driver-class-name: com.mysql.dbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     initialize: true
     continue-on-error: true
 
