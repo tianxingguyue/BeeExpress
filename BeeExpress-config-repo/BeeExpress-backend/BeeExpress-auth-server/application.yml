@@ -1,12 +1,3 @@
-logging:
-  path: ./logs/BeeExpress-auth-server
-  file: ${logging.path}/root.log
-  common-pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS}:[%5p] [%t:%r] [%C{1}:%M:%L] --> %m%n'
-  level:
-    console: INFO
-    rest: INFO
-    service: INFO
-    sql: DEBUG
 
 BeeExpress:
   mysql:
@@ -71,18 +62,18 @@ spring:
   #MaxAutoRetriesNextServer: 1
   #OkToRetryOnAllOperations: false
 
-hystrix:
-  threadpool:
-    default:
-      coreSize: 1000 # 并发执行的最大线程数，默认10
-      maxQueueSize: 1000 # BlockingQueue的最大队列数
-      queueSizeRejectionThreshold: 500 # 即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
+#hystrix:
+  #threadpool:
+  #  default:
+    #  coreSize: 1000 # 并发执行的最大线程数，默认10
+    #  maxQueueSize: 1000 # BlockingQueue的最大队列数
+     # queueSizeRejectionThreshold: 500 # 即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+  #command:
+   # default:
+    #  execution:
+       # isolation:
+         # thread:
+          #  timeoutInMilliseconds: 5000
 
 eureka:
   instance:
@@ -114,34 +105,3 @@ endpoints:
     enabled: true
     sensitive: true  #actuator的health接口是否需要安全保证
 
-jwt:
-  token-header: token # 其三方应用token
-  expire: 7200
-  pri-key: #   私钥
-    path: app/pri.key
-  pub-key:
-    path: app/pub.key
-
-client:
-  id: BeeExpress-auth-server
-  secret: 123456
-  token-header: token
-  admin-header: _isAdmin
-  expire: 7200
-  pri-key: # client 私钥
-    path: client/pri.key
-  pub-key:
-    path: client/pub.key
-
-id-generator:
-  machine-code: 1  # id生成器机器掩码
-
-swagger2:
-  package: com.BeeExpress.auth.controller
-  service:
-    name: 认证服务
-    description: 认证服务，用于token管理
-    contact:
-      name: 最后
-      url: http://www.BeeExpress.com/
-      email: tangstruggle@sina.com
