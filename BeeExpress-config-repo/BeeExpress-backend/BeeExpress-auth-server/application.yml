@@ -62,14 +62,14 @@ spring:
 #      queue: zipkin
 
 
-ribbon:
-  eureka:
-    enabled: true
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 1
-  OkToRetryOnAllOperations: false
+#ribbon:
+ # eureka:
+  #  enabled: true
+  #ReadTimeout: 60000
+  #ConnectTimeout: 60000
+  #MaxAutoRetries: 0
+  #MaxAutoRetriesNextServer: 1
+  #OkToRetryOnAllOperations: false
 
 hystrix:
   threadpool:
