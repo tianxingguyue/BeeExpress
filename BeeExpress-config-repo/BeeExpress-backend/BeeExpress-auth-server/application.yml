@@ -10,11 +10,6 @@ logging:
 
 BeeExpress:
   mysql:
-    driverClassName: com.mysql.jdbc.Driver
-    host: BeeExpress.mysql.host             # 根据环境更改
-    port: 3306                  # 根据环境更改
-    username: root              # 根据环境更改
-    password: lzl123
     admin:
       driverClassName: com.mysql.jdbc.Driver
       host: BeeExpress.mysql.host             # 根据环境更改
