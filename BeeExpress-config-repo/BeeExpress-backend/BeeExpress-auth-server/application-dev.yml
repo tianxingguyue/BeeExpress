@@ -4,4 +4,26 @@ server:
 spring:
   profiles:
     active: dev
-  
+  redis:
+    key-prefix: dev  # redis key的前缀， 环境的多个实例一定要配置一样（即prod1和prod2文件中需要配置一致）
+    host: BeeExpress.redis.host
+  rabbitmq:
+    host: BeeExpress.rabbitmq.host
+    port: 5672
+    username: guest
+    password: guest
+
+BeeExpress:
+  mysql:
+    admin:
+      database: BeeExpress_admin_dev
+
+logging:
+  level:
+    console: INFO
+    filter: INFO
+
+id-generator:
+  machine-code: 1  # id生成器机器掩码
+
+# rabbitMQ/Mysql/Redis ip，端口，帐号等根据环境自行修改。
