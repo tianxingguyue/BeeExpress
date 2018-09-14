@@ -1,4 +1,12 @@
-
+logging:
+  path: ./logs/BeeExpress-auth-server
+  file: ${logging.path}/root.log
+  common-pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS}:[%5p] [%t:%r] [%C{1}:%M:%L] --> %m%n'
+  level:
+    console: INFO
+    rest: INFO
+    service: INFO
+    sql: DEBUG
 
 BeeExpress:
   mysql:
@@ -30,10 +38,38 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
     default-property-inclusion: non_null
+  redis:
+    key-prefix: dev
+    host: 192.168.1.118
+    pool:
+      max-active: 100
+      min-idle: 2
+      max-idle: 8
+      max-wait: 100
+  rabbitmq:
+    host: BeeExpress.rabbitmq.host
+    port: 5672
+    username: guest
+    password: guest
+  zipkin:
+#    base-url: http://BeeExpress-zipkin:8510
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: ${spring.application.name}
+#    rabbitmq:
+#      queue: zipkin
 
 
-
-
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: false
 
 hystrix:
   threadpool:
@@ -77,6 +113,7 @@ endpoints:
   health:
     enabled: true
     sensitive: true  #actuator的health接口是否需要安全保证
+
 jwt:
   token-header: token # 其三方应用token
   expire: 7200
