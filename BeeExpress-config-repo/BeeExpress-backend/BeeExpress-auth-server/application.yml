@@ -1,4 +1,5 @@
 
+
 BeeExpress:
   mysql:
     admin:
@@ -31,17 +32,17 @@ spring:
     default-property-inclusion: non_null
   redis:
     key-prefix: dev
-    host: 192.168.1.118
+    host: BeeExpress.redis.host
     pool:
       max-active: 100
       min-idle: 2
       max-idle: 8
       max-wait: 100
-  #rabbitmq:
-   # host: BeeExpress.rabbitmq.host
-    #port: 5672
-    #username: guest
-    #password: guest
+  rabbitmq:
+    host: BeeExpress.rabbitmq.host
+    port: 5672
+    username: guest
+    password: guest
   zipkin:
 #    base-url: http://BeeExpress-zipkin:8510
     locator:
@@ -53,27 +54,27 @@ spring:
 #      queue: zipkin
 
 
-#ribbon:
- # eureka:
-  #  enabled: true
-  #ReadTimeout: 60000
-  #ConnectTimeout: 60000
-  #MaxAutoRetries: 0
-  #MaxAutoRetriesNextServer: 1
-  #OkToRetryOnAllOperations: false
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: false
 
-#hystrix:
-  #threadpool:
-  #  default:
-    #  coreSize: 1000 # 并发执行的最大线程数，默认10
-    #  maxQueueSize: 1000 # BlockingQueue的最大队列数
-     # queueSizeRejectionThreshold: 500 # 即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
-  #command:
-   # default:
-    #  execution:
-       # isolation:
-         # thread:
-          #  timeoutInMilliseconds: 5000
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000 # 并发执行的最大线程数，默认10
+      maxQueueSize: 1000 # BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 500 # 即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
 
 eureka:
   instance:
@@ -105,3 +106,34 @@ endpoints:
     enabled: true
     sensitive: true  #actuator的health接口是否需要安全保证
 
+jwt:
+  token-header: token # 其三方应用token
+  expire: 7200
+  pri-key: #   私钥
+    path: app/pri.key
+  pub-key:
+    path: app/pub.key
+
+client:
+  id: BeeExpress-auth-server
+  secret: 123456
+  token-header: token
+  admin-header: _isAdmin
+  expire: 7200
+  pri-key: # client 私钥
+    path: client/pri.key
+  pub-key:
+    path: client/pub.key
+
+id-generator:
+  machine-code: 1  # id生成器机器掩码
+
+swagger2:
+  package: com.BeeExpress.auth.controller
+  service:
+    name: 认证服务
+    description: 认证服务，用于token管理
+    contact:
+      name: 最后
+      url: http://www.BeeExpress.com/
+      email: tangstruggle@sina.com
