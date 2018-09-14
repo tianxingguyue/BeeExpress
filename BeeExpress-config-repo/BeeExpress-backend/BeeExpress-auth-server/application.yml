@@ -1,14 +1,8 @@
 
-BeeExpress:
-  mysql:
-    admin:
-      database: BeeExpress_admin_dev       # 根据环境更改
-      driverClassName: com.mysql.jdbc.Driver
-      host: BeeExpress.mysql.host
-      password: lzl123
-      port: 3306
-      url: jdbc:mysql://BeeExpress.mysql.host:3306/BeeExpress_admin_dev?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
-      username: root
+BeeExpressData:
+  password: lzl123
+  url: jdbc:mysql://BeeExpress.mysql.host:3306/BeeExpress_admin_dev?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
+  username: root
 
 spring:
   application:
