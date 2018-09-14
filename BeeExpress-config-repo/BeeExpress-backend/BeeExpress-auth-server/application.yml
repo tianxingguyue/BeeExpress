@@ -77,7 +77,27 @@ endpoints:
   health:
     enabled: true
     sensitive: true  #actuator的health接口是否需要安全保证
+jwt:
+  token-header: token # 其三方应用token
+  expire: 7200
+  pri-key: #   私钥
+    path: app/pri.key
+  pub-key:
+    path: app/pub.key
 
+client:
+  id: BeeExpress-auth-server
+  secret: 123456
+  token-header: token
+  admin-header: _isAdmin
+  expire: 7200
+  pri-key: # client 私钥
+    path: client/pri.key
+  pub-key:
+    path: client/pub.key
+
+id-generator:
+  machine-code: 1  # id生成器机器掩码
 
 swagger2:
   package: com.BeeExpress.auth.controller
