@@ -1,24 +1,17 @@
 
 
-BeeExpress:
-  mysql:
-    admin:
-      database: BeeExpress_admin_dev       # 根据环境更改
-      driverClassName: ${BeeExpress.mysql.driverClassName}
-      host: ${BeeExpress.mysql.host}
-      password: ${BeeExpress.mysql.password}
-      port: ${BeeExpress.mysql.port}
-      url: jdbc:mysql://${BeeExpress.mysql.admin.host}:${BeeExpress.mysql.admin.port}/${BeeExpress.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
-      username: ${BeeExpress.mysql.username}
-    driverClassName: com.mysql.jdbc.Driver
-    host: BeeExpress.mysql.host             # 根据环境更改
-    port: 3306                  # 根据环境更改
-    username: root              # 根据环境更改
-    password: lzl123
 
 spring:
   application:
     name: BeeExpress-auth-server
+  datasource:
+    #spring boot数据源配置
+    url: jdbc:mysql://BeeExpress.mysql.host:3306/BeeExpress_zipkin_dev?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: lzl123     # 这里不需要加密
+    driver-class-name: com.mysql.jdbc.Driver
+    initialize: true
+    continue-on-error: true
   sleuth:
     sampler:
       percentage: 1
