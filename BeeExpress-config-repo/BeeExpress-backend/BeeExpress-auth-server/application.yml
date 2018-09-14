@@ -22,6 +22,14 @@ BeeExpress:
 spring:
   application:
     name: BeeExpress-auth-server
+  datasource:
+    #spring boot数据源配置
+    url: jdbc:mysql://BeeExpress.mysql.host:3306/beeexpress_admin_dev?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: lzl123     # 这里不需要加密
+    driver-class-name: com.mysql.jdbc.Driver
+    initialize: true
+    continue-on-error: true
   sleuth:
     sampler:
       percentage: 1
