@@ -16,13 +16,12 @@ BeeExpress:
     username: root              # 根据环境更改
     password: lzl123
     admin:
-      database: BeeExpress_admin_dev       # 根据环境更改
-      driverClassName: ${BeeExpress.mysql.driverClassName}
-      host: ${BeeExpress.mysql.host}
-      password: ${BeeExpress.mysql.password}
-      port: ${BeeExpress.mysql.port}
-      url: jdbc:mysql://${BeeExpress.mysql.admin.host}:${BeeExpress.mysql.admin.port}/${BeeExpress.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
-      username: ${BeeExpress.mysql.username}
+      driverClassName: com.mysql.jdbc.Driver
+      host: BeeExpress.mysql.host             # 根据环境更改
+      port: 3306                  # 根据环境更改
+      username: root              # 根据环境更改
+      password: lzl123
+      url: jdbc:mysql://BeeExpress.mysql.host:3306/beeexpress_admin_dev?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
     
 
 spring:
