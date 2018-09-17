@@ -1,10 +1,4 @@
-logging:
-  path: ./logs/BeeExpress-gateway-server
-  file: ${logging.path}/root.log
-  common-pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS}:[%5p] [%t:%r] [%C{1}:%M:%L] --> %m%n'
-  level:
-    console: INFO
-    filter: INFO
+
 
 server:
   port: 9770 #启动端口
@@ -39,7 +33,7 @@ spring:
     password: guest
     username: guest
   redis:
-    host: BeeExpress.redis.host
+    host: 192.168.1.118
     port: 6379
     pool:
       max-active: 20
@@ -65,7 +59,7 @@ spring:
 management:
   security:
     enabled: true
-  context-path: /mgmt
+  context-path: /bee
 
 security:
   basic:
