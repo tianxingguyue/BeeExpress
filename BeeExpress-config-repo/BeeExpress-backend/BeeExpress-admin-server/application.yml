@@ -1,12 +1,4 @@
-logging:
-  path: ./logs/BeeExpress-admin-server
-  file: ${logging.path}/root.log
-  common-pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS}:[%5p] [%t:%r] [%C{1}:%M:%L] --> %m%n'
-  level:
-    console: INFO
-    rest: INFO
-    service: INFO
-    sql: DEBUG
+
 
 server:
   port: 9765
@@ -82,22 +74,22 @@ endpoints:
 dozer:
   mappingFiles: classpath*:dozer/*.dozer.xml
 
-BeeExpress:
+bee:
   mysql:
     admin:
       database: BeeExpress_admin_dev       # 根据环境更改
-      driverClassName: ${BeeExpress.mysql.driverClassName}
-      host: ${BeeExpress.mysql.host}
-      password: ${BeeExpress.mysql.password}
-      port: ${BeeExpress.mysql.port}
-      url: jdbc:mysql://${BeeExpress.mysql.admin.host}:${BeeExpress.mysql.admin.port}/${BeeExpress.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
+      driverClassName: ${bee.mysql.driverClassName}
+      host: ${bee.mysql.host}
+      password: ${bee.mysql.password}
+      port: ${bee.mysql.port}
+      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
       username: ${BeeExpress.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
     host: BeeExpress.mysql.host     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: lzl123
+    password: KCbNT3bC2QWYqXKaa9gM55lCDmEWYEkJW1U6VvwBe44xkyeXH6MoPzGQjL/1YkyoGIsbM/TEO+i8ZlZLbO9iMw==
 
 
 feign:
