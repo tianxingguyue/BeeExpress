@@ -3,12 +3,12 @@ bee:
   mysql:
     admin:
       database: BeeExpress_admin_dev       # 根据环境更改
-      driverClassName: ${BeeExpress.mysql.driverClassName}
-      host: ${BeeExpress.mysql.host}
-      password: ${BeeExpress.mysql.password}
-      port: ${BeeExpress.mysql.port}
-      url: jdbc:mysql://${BeeExpress.mysql.admin.host}:${BeeExpress.mysql.admin.port}/${BeeExpress.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
-      username: ${BeeExpress.mysql.username}
+      driverClassName: ${bee.mysql.driverClassName}
+      host: ${bee.mysql.host}
+      password: ${bee.mysql.password}
+      port: ${bee.mysql.port}
+      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
+      username: ${bee.mysql.username}
     driverClassName: com.mysql.jdbc.Driver
     host: BeeExpress.mysql.host             # 根据环境更改
     port: 3306                  # 根据环境更改
