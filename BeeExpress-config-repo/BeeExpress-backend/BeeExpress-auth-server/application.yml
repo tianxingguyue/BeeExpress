@@ -1,5 +1,5 @@
 
-BeeExpress:
+bee:
   mysql:
     admin:
       database: BeeExpress_admin_dev       # 根据环境更改
