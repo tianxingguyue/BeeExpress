@@ -1,5 +1,13 @@
 
-
+logging:
+  path: ./logs/BeeExpress-admin-server
+  file: ${logging.path}/root.log
+  common-pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS}:[%5p] [%t:%r] [%C{1}:%M:%L] --> %m%n'
+  level:
+    console: INFO
+    rest: INFO
+    service: INFO
+    sql: DEBUG
 server:
   port: 9765
 eureka:
