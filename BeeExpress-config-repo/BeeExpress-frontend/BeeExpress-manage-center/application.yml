@@ -15,7 +15,7 @@ shiro:
     authc:
       /**
 
-BeeExpress:
+bee:
   variable:
     gate-way-url-prefix: http://127.0.0.1:9970
 
