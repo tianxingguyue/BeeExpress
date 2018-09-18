@@ -83,7 +83,7 @@ bee:
       password: ${bee.mysql.password}
       port: ${bee.mysql.port}
       url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
-      username: ${BeeExpress.mysql.username}
+      username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
     host: BeeExpress.mysql.host     # 根据环境更改
