@@ -52,10 +52,10 @@ spring:
 #          enable: true
 #          required: true
   rabbitmq:
-    host: BeeExpress.rabbitmq.host # 在hosts文件中配置地址
+    host: 192.168.1.118 # 在hosts文件中配置地址
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: admin
   boot:
     admin:
       routes:

@@ -153,10 +153,10 @@ bee:
       username: ${BeeExpress.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: BeeExpress.mysql.host     # 根据环境更改
+    host: 192.168.1.128     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: KCbNT3bC2QWYqXKaa9gM55lCDmEWYEkJW1U6VvwBe44xkyeXH6MoPzGQjL/1YkyoGIsbM/TEO+i8ZlZLbO9iMw==
+    password: ODyhdmuj3D/ZZ4fP0n+zFwlnLWMHF3gQq/NZcKs4/pNDKhee4478DFkvILXG/4UV/Za7g0Yn8kJXPVu9uMqLXA==
   file:
     upload-path-prefix: /home/BeeExpress/uploadfile/
     remote-uri-prefix: http://192.168.65.147:6080/
