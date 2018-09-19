@@ -78,7 +78,7 @@ dozer:
 bee:
   mysql:
     admin:
-      database: beeexpress_admin_dev       # 根据环境更改
+      database: BeeExpress       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
@@ -87,10 +87,10 @@ bee:
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: localhost     # 根据环境更改
+    host: 192.168.1.128     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: KCbNT3bC2QWYqXKaa9gM55lCDmEWYEkJW1U6VvwBe44xkyeXH6MoPzGQjL/1YkyoGIsbM/TEO+i8ZlZLbO9iMw==
+    password: Bee123456
 
 
 feign:
