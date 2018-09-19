@@ -21,7 +21,7 @@ bee:
     host: 192.168.1.128             # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: 1ODyhdmuj3D/ZZ4fP0n+zFwlnLWMHF3gQq/NZcKs4/pNDKhee4478DFkvILXG/4UV/Za7g0Yn8kJXPVu9uMqLXA==
+    password: ODyhdmuj3D/ZZ4fP0n+zFwlnLWMHF3gQq/NZcKs4/pNDKhee4478DFkvILXG/4UV/Za7g0Yn8kJXPVu9uMqLXA==
 
 spring:
   application:
