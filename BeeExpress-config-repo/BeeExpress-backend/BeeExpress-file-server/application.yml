@@ -48,19 +48,19 @@ spring:
       max-file-size: 2000Mb      # Max file size，默认1M
       max-request-size: 2500Mb   # Max request size，默认10M
   redis:
-    host: BeeExpress.redis.host
+    host: 192.168.1.118
     port: 6379
+    password: Bee@9394
     pool:
-      max-active: 100
+      max-active: 20
       min-idle: 2
       max-idle: 8
       max-wait: 100
-    key-prefix: dev
   rabbitmq:
-    host: BeeExpress.rabbitmq.host
-    port: 5672               # 根据环境更改
-    password: guest          # 根据环境更改
-    username: guest          # 根据环境更改
+    host: 192.168.1.118
+    port: 5672
+    password: admin
+    username: admin
   sleuth:
     sampler:
       percentage: 0.5

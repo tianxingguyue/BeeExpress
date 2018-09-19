@@ -34,13 +34,14 @@ spring:
     time-zone: GMT+8
     default-property-inclusion: non_null
   rabbitmq:
-    host: BeeExpress.rabbitmq.host
+    host: 192.168.1.118
     port: 5672
-    password: guest
-    username: guest
+    password: admin
+    username: admin
   redis:
     host: 192.168.1.118
     port: 6379
+    password: Bee@9394
     pool:
       max-active: 20
       min-idle: 2
