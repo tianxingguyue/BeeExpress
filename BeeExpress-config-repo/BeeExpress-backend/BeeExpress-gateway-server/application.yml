@@ -104,7 +104,7 @@ zuul:
       path: /admin/**
       serviceId: BeeExpress-admin-server
     auth:    # 其中 auth 是路由名称，可以随便定义，但是path和service-id需要一一对应
-      path: /auth/**
+      path: /auth22/**
       serviceId: BeeExpress-auth-server
     file:
       path: /file/**
