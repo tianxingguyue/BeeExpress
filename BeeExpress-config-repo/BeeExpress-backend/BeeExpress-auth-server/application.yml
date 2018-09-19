@@ -40,16 +40,17 @@ spring:
   redis:
     key-prefix: dev
     host: 192.168.1.118
+    password: Bee@9394
     pool:
       max-active: 100
       min-idle: 2
       max-idle: 8
       max-wait: 100
   rabbitmq:
-    host: BeeExpress.rabbitmq.host
+    host: 192.168.1.118
     port: 5672
-    username: guest
-    password: guest
+    password: admin
+    username: admin
   zipkin:
 #    base-url: http://BeeExpress-zipkin:8510
     locator:

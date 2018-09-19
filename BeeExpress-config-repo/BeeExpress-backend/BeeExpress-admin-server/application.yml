@@ -23,14 +23,15 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
     default-property-inclusion: non_null
-  #rabbitmq:
-   # host: BeeExpress.rabbitmq.host
-    #port: 5672
-    #password: guest
-    #username: guest
+  rabbitmq:
+    host: 192.168.1.118
+    port: 5672
+    password: admin
+    username: admin
   redis:
     host: 192.168.1.118
     port: 6379
+    password: Bee@9394
     pool:
       max-active: 20
       min-idle: 2
@@ -86,10 +87,10 @@ bee:
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: BeeExpress.mysql.host     # 根据环境更改
+    host: 192.168.1.128     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: KCbNT3bC2QWYqXKaa9gM55lCDmEWYEkJW1U6VvwBe44xkyeXH6MoPzGQjL/1YkyoGIsbM/TEO+i8ZlZLbO9iMw==
+    password: ODyhdmuj3D/ZZ4fP0n+zFwlnLWMHF3gQq/NZcKs4/pNDKhee4478DFkvILXG/4UV/Za7g0Yn8kJXPVu9uMqLXA==
 
 
 feign:
