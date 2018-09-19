@@ -89,7 +89,7 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     preferIpAddress: true
-    status-page-url: http://gateway.BeeExpress.com:9770/api/auth/swagger-ui.html
+    status-page-url: http://gateway.BeeExpress.com:9770/api/auth22/swagger-ui.html
     ip-address: 127.0.0.1
     metadata-map:
       user.name: ${security.user.name}
