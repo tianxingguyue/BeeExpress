@@ -10,7 +10,7 @@ logging:
 bee:
   mysql:
     admin:
-      database: BeeExpress       # 根据环境更改
+      database: beeexpress_admin_dev       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
@@ -18,10 +18,10 @@ bee:
       url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
       username: ${bee.mysql.username}
     driverClassName: com.mysql.jdbc.Driver
-    host: 192.168.1.128             # 根据环境更改
+    host: localhost             # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: ODyhdmuj3D/ZZ4fP0n+zFwlnLWMHF3gQq/NZcKs4/pNDKhee4478DFkvILXG/4UV/Za7g0Yn8kJXPVu9uMqLXA==
+    password: KCbNT3bC2QWYqXKaa9gM55lCDmEWYEkJW1U6VvwBe44xkyeXH6MoPzGQjL/1YkyoGIsbM/TEO+i8ZlZLbO9iMw==
 
 spring:
   application:
