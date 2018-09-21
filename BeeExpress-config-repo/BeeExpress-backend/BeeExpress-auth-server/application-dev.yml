@@ -4,15 +4,6 @@ server:
 spring:
   profiles:
     active: dev
-  data:
-      mongodb:
-        host: 192.168.1.128
-        port: 27017
-        database: BeeExpress
-        authentication-database: admin
-        uri: mongodb://root:Bee123456.@192.168.1.128:27017/BeeExpress
-        username: root
-        password: Bee123456.
   redis:
       key-prefix: dev
       host: 192.168.1.118
