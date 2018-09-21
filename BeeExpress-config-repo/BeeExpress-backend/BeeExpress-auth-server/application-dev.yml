@@ -13,20 +13,20 @@ spring:
         min-idle: 2
         max-idle: 8
         max-wait: 100
-    rabbitmq:
-      host: 192.168.1.118
-      port: 5672
-      password: admin
-      username: admin
-    zipkin:
-  #    base-url: http://BeeExpress-zipkin:8510
-      locator:
-        discovery:
-          enabled: true
-      service:
-        name: ${spring.application.name}
-  #    rabbitmq:
-  #      queue: zipkin
+  rabbitmq:
+    host: 192.168.1.118
+    port: 5672
+    password: admin
+    username: admin
+  zipkin:
+#    base-url: http://BeeExpress-zipkin:8510
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: ${spring.application.name}
+#    rabbitmq:
+#      queue: zipkin
  
 
 bee:
