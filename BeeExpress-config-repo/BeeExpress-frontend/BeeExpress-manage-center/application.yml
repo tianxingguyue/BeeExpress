@@ -1,5 +1,5 @@
 shiro:
-  #realm: com.BeeExpress.center.shiro.ShiroAuthorizingRealm
+  realm: com.BeeExpress.center.shiro.ShiroAuthorizingRealm
   loginUrl: http://center.BeeExpress.com:${server.port}/login
   successUrl: http://center.BeeExpress.com:${server.port}/index
   unauthorizedUrl: http://center.BeeExpress.com:${server.port}/unauthorized
