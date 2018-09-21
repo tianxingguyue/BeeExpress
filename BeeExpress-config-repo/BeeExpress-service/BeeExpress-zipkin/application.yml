@@ -7,20 +7,7 @@ spring:
     name: BeeExpress-zipkin
   sleuth:
     enabled: false # 表示当前程序不使用sleuth
-  rabbitmq:
-    host: 192.168.1.118
-    port: 5672
-    password: admin
-    username: admin
-  datasource:
-    schema[0]: classpath:/zipkin.sql #数据库脚本创建地址，当有多个是可使用[x]表示集合第几个元素
-    #spring boot数据源配置
-    url: jdbc:mysql://192.168.1.128:3306/BeeExpress?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
-    username: root
-    password: Bee123456     # 这里不需要加密
-    driver-class-name: com.mysql.jdbc.Driver
-    initialize: true
-    continue-on-error: true
+
 
 # 表示zipkin数据存储方式是mysql
 zipkin:
