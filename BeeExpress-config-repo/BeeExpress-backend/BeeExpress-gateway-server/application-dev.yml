@@ -9,30 +9,30 @@ spring:
       port: 5672
       password: admin
       username: admin
-    redis:
-      host: 192.168.1.118
-      port: 6379
-      password: Bee@9394
-      pool:
-        max-active: 20
-        min-idle: 2
-        max-idle: 8
-        max-wait: 100
-      key-prefix: dev
-    sleuth:
-      sampler:
-        percentage: 1
-      integration:
-        enabled: false
-      scheduled:
-        skip-pattern: "^org.*HystrixStreamTask$"
-    zipkin:
-  #    base-url: http://BeeExpress-zipkin:8510
-      locator:
-        discovery:
-          enabled: true
-      service:
-        name: ${spring.application.name}
+  redis:
+    host: 192.168.1.118
+    port: 6379
+    password: Bee@9394
+    pool:
+      max-active: 20
+      min-idle: 2
+      max-idle: 8
+      max-wait: 100
+    key-prefix: dev
+  sleuth:
+    sampler:
+      percentage: 1
+    integration:
+      enabled: false
+    scheduled:
+      skip-pattern: "^org.*HystrixStreamTask$"
+  zipkin:
+#    base-url: http://BeeExpress-zipkin:8510
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: ${spring.application.name}
 
 
 # rabbitMQ/Mysql/Redis ip，端口，帐号等根据环境自行修改。
