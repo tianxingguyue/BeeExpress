@@ -16,7 +16,7 @@ eureka:
 
 spring:
   profiles:
-    active: dev
+    active: test
   application:
     name: BeeExpress-gateway-server
   http:

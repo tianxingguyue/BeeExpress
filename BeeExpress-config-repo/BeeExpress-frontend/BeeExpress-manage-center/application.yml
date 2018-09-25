@@ -31,11 +31,6 @@ management:
     enabled: false
 
 spring:
-  rabbitmq:
-      host: 192.168.1.118
-      port: 5672
-      password: admin
-      username: admin
   thymeleaf:
     cache: false
   mvc:

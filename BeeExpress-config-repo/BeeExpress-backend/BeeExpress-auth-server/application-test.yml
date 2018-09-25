@@ -3,10 +3,10 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: test
 
   redis:
-      key-prefix: dev
+      key-prefix: test
       host: 192.168.1.118
       password: Bee@9394
       pool:
@@ -33,7 +33,7 @@ spring:
 bee:
   mysql:
     admin:
-      database: BeeExpress       # 根据环境更改
+      database: BeeExpressTest       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
@@ -51,7 +51,7 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     preferIpAddress: true
-    status-page-url: http://gateway.BeeExpress.com:9770/api/auth/swagger-ui.html
+    status-page-url: http://192.168.1.118:9770/api/auth/swagger-ui.html
     ip-address: 127.0.0.1
     metadata-map:
       user.name: ${security.user.name}
