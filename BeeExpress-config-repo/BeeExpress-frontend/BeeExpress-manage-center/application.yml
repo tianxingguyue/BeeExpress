@@ -1,8 +1,8 @@
 shiro:
   realm: com.BeeExpress.center.shiro.ShiroAuthorizingRealm
-  loginUrl: http://center.BeeExpress.com:${server.port}/login
-  successUrl: http://center.BeeExpress.com:${server.port}/index
-  unauthorizedUrl: http://center.BeeExpress.com:${server.port}/unauthorized
+  loginUrl: http://192.168.1.118:${server.port}/login
+  successUrl: http://192.168.1.118:${server.port}/index
+  unauthorizedUrl: http://192.168.1.118:${server.port}/unauthorized
   filterChainDefinitions:
     anon:
       - /login
