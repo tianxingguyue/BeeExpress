@@ -54,12 +54,12 @@ bee:
       port: ${bee.mysql.port}
       url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
       username: ${bee.mysql.username}
-      #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
-      driverClassName: com.mysql.jdbc.Driver    # 5.x
-      host: 192.168.1.128     # 根据环境更改
-      port: 3306                  # 根据环境更改
-      username: root              # 根据环境更改
-      password: Bee123456
+    #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
+    driverClassName: com.mysql.jdbc.Driver    # 5.x
+    host: 192.168.1.128     # 根据环境更改
+    port: 3306                  # 根据环境更改
+    username: root              # 根据环境更改
+    password: Bee123456
 swagger2:
   package: com.BeeExpress.admin.rest
   service:
