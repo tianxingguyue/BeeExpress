@@ -23,7 +23,7 @@ spring:
   application:
     name: BeeExpress-file-server
   profiles:
-    active: test
+    active: dev
   http:
     multipart:
       max-file-size: 2000Mb      # Max file size，默认1M
