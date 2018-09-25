@@ -60,15 +60,6 @@ bee:
       port: 3306                  # 根据环境更改
       username: root              # 根据环境更改
       password: Bee123456
-    mongodb:
-      admin:
-          host: 192.168.1.128
-          port: 27017
-          database: BeeExpress
-          authentication-database: admin
-          uri: mongodb://root:Bee123456.@192.168.1.128:27017/BeeExpress
-          username: root
-          password: Bee123456.
 swagger2:
   package: com.BeeExpress.admin.rest
   service:
