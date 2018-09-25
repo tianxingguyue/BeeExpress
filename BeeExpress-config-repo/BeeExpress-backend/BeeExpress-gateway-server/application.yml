@@ -66,9 +66,9 @@ zuul:
     base:  # 其中 back 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /base/**
       serviceId: BeeExpress-base-server
-    admin:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
-      path: /admin/**
-      serviceId: BeeExpress-admin-server
+#    admin:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
+#      path: /admin/**
+#      serviceId: BeeExpress-admin-server
     auth:    # 其中 auth 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /auth/**
       serviceId: BeeExpress-auth-server
