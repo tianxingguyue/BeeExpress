@@ -25,7 +25,7 @@ zipkin:
     http:
       enabled: true  # 这里开启了http模式，不确定是走rabbitmq，还是http 进行监控的
     rabbitmq:
-      addresses: http://192.168.1.118:5672
+      addresses: 192.168.1.118:5672
       username: admin
       password: admin
       queue: zipkin
