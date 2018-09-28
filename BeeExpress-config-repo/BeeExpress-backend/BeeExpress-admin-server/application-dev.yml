@@ -61,7 +61,7 @@ bee:
     username: root              # 根据环境更改
     password: Bee123456
 swagger2:
-  package: com.BeeExpress.admin.rest
+  package: com.BeeExpress.admin.controller
   service:
     name: admin 后台管理 服务
     description: 后台管理服务
