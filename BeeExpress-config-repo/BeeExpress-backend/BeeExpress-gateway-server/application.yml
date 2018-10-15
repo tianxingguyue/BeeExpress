@@ -69,6 +69,9 @@ zuul:
     ucp:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /ucp/**
       serviceId: BeeExpress-UCP-server
+    pda:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
+      path: /pda/**
+      serviceId: BeeExpress-PDA-server
     admin:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /admin/**
       serviceId: BeeExpress-admin-server
@@ -105,7 +108,10 @@ gateway:
       - /ucp/webjars
       - /ucp/v2/api-docs
       - /ucp/swagger-resources
-
+      - /pda/swagger-ui.html
+      - /pda/webjars
+      - /pda/v2/api-docs
+      - /pda/swagger-resources
 #请求和响应GZIP压缩支持
 feign:
   compression:
