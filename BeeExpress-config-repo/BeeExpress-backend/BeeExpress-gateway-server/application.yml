@@ -72,6 +72,12 @@ zuul:
     pda:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /pda/**
       serviceId: BeeExpress-PDA-server
+    tms:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
+      path: /tms/**
+      serviceId: BeeExpress-TMS-server
+    oms:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
+      path: /oms/**
+      serviceId: BeeExpress-OMS-server
     admin:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /admin/**
       serviceId: BeeExpress-admin-server
@@ -112,6 +118,14 @@ gateway:
       - /pda/webjars
       - /pda/v2/api-docs
       - /pda/swagger-resources
+      - /tms/swagger-ui.html
+      - /tms/webjars
+      - /tms/v2/api-docs
+      - /tms/swagger-resources
+      - /oms/swagger-ui.html
+      - /oms/webjars
+      - /oms/v2/api-docs
+      - /oms/swagger-resources
 #请求和响应GZIP压缩支持
 feign:
   compression:
