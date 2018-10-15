@@ -61,9 +61,9 @@ bee:
     username: root              # 根据环境更改
     password: Bee123456
 swagger2:
-  package: com.BeeExpress.DCP.controller
+  package: com.BeeExpress.dcp.controller
   service:
-    name: DCP DCP系统 服务
+    name:  DCP系统
     description: DCP系统服务
     contact:
       name: 最后
