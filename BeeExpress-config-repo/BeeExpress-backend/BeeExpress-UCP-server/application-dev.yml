@@ -5,7 +5,7 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     prefer-ip-address: true
-    status-page-url: http://gateway.BeeExpress.com:9770/api/admin/swagger-ui.html
+    status-page-url: http://gateway.BeeExpress.com:9770/api/DCP/swagger-ui.html
 #    hostname: ${eureka.hostname:eureka.BeeExpress.com}    # 指定该Eureka实例的主机名
     metadata-map:
       user.name: ${security.user.name}
@@ -61,10 +61,10 @@ bee:
     username: root              # 根据环境更改
     password: Bee123456
 swagger2:
-  package: com.BeeExpress.admin.controller
+  package: com.BeeExpress.DCP.controller
   service:
-    name: admin 后台管理 服务
-    description: 后台管理服务
+    name: DCP DCP系统 服务
+    description: DCP系统服务
     contact:
       name: 最后
       url: http://www.BeeExpress.com/

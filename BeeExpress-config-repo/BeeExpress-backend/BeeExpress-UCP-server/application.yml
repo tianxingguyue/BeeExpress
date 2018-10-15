@@ -58,7 +58,7 @@ auth:
     pub-key:
       path: app/pub.key
   client:
-    id: BeeExpress-admin-server
+    id: BeeExpress-UCP-server
     secret: 123456
     token-header: token
     admin-header: _isAdmin
