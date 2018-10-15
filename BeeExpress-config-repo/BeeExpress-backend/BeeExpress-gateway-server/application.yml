@@ -66,8 +66,8 @@ zuul:
     base:  # 其中 back 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /base/**
       serviceId: BeeExpress-base-server
-    dcp:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
-      path: /dcp/**
+    ucp:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
+      path: /ucp/**
       serviceId: BeeExpress-UCP-server
     admin:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
       path: /admin/**
@@ -101,10 +101,10 @@ gateway:
       - /file/webjars
       - /file/v2/api-docs
       - /file/swagger-resources
-      - /dcp/swagger-ui.html
-      - /dcp/webjars
-      - /dcp/v2/api-docs
-      - /dcp/swagger-resources
+      - /ucp/swagger-ui.html
+      - /ucp/webjars
+      - /ucp/v2/api-docs
+      - /ucp/swagger-resources
 
 #请求和响应GZIP压缩支持
 feign:
