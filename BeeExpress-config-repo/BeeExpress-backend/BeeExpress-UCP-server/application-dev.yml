@@ -11,7 +11,7 @@ eureka:
       user.name: ${security.user.name}
       user.password: ${security.user.password}
       management.context-path: ${management.context-path}
-  
+
 spring:
   rabbitmq:
       host: 192.168.1.118
@@ -47,7 +47,7 @@ spring:
 bee:
   mysql:
     admin:
-      database: BeeExpress       # 根据环境更改
+      database: BeeExpress_ucp       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}

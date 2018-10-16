@@ -47,7 +47,7 @@ spring:
 bee:
   mysql:
     admin:
-      database: BeeExpress       # 根据环境更改
+      database: BeeExpress_tms       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
@@ -63,8 +63,8 @@ bee:
 swagger2:
   package: com.BeeExpress.tms.controller
   service:
-    name: admin 后台管理 服务
-    description: 后台管理服务
+    name: tms 后台管理
+    description: tms后台管理服务
     contact:
       name: 最后
       url: http://www.BeeExpress.com/
