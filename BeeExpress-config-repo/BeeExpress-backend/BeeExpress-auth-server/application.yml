@@ -54,7 +54,10 @@ security:
   user:
     name: admin
     password: ${BeeExpress_AUTH_SERVER_PASSWORD:admin}
-
+endpoints:
+  health:
+    enabled: true
+    sensitive: true  #actuator的health接口是否需要安全保证
 
 jwt:
   token-header: token # 其三方应用token
