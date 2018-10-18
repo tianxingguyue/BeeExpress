@@ -34,9 +34,9 @@ endpoints:
 dozer:
   mappingFiles: classpath*:dozer/*.dozer.xml
 
-feign:
-  hystrix:
-    enabled: true
+#feign:
+#  hystrix:
+#    enabled: true
 
 hystrix:
   config:
