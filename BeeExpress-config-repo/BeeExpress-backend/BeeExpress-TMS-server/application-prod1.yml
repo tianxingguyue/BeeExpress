@@ -47,7 +47,7 @@ spring:
 bee:
   mysql:
     admin:
-      database: BeeExpress_tms       # 根据环境更改
+      database: beeexpress_tms       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
