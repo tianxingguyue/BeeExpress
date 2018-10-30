@@ -1,0 +1,86 @@
+info:
+  artifact: BeeExpress-file-server
+  name: '@project.name@'
+  description: '@project.description@'
+  version: '@project.version@'
+  spring-boot-version: '@spring.boot.version@'
+  spring-cloud-version: '@spring.cloud.version@'
+
+
+
+# 端口号
+server:
+  port: 9755
+
+
+
+# bean 转换
+dozer:
+  mappingFiles: classpath*:dozer/*.dozer.xml
+
+# spring配置
+spring:
+  application:
+    name: BeeExpress-file-server
+  profiles:
+    active: dev
+  http:
+    multipart:
+      max-file-size: 2000Mb      # Max file size，默认1M
+      max-request-size: 2500Mb   # Max request size，默认10M
+
+
+# actuator端点 以及 actuator端点的权限
+management:
+  security:
+    enabled: true
+  context-path: /bee
+security:
+  basic:
+    enabled: true
+    path: ${management.context-path}
+  user:
+    name: admin
+    password: ${SECURITY_USER_PASSWORD:admin}
+endpoints:
+  health:
+    enabled: true
+    sensitive: true  # actuator的health接口是否需要安全保证
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  config:
+    stream:
+      maxConcurrentConnections: 50
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+
+
+# 认证客服端配置
+auth:
+  serviceId: BeeExpress-auth-server
+  app:
+    token-header: token # 其三方应用token
+    pub-key:
+      path: app/pub.key
+  client:
+    id: BeeExpress-file-server
+    secret: 123456
+    token-header: token
+    admin-header: _isAdmin
+    pub-key:
+      path: client/pub.key
+
+ # id生成器机器掩码
+id-generator:
+  machine-code: 1
+
+

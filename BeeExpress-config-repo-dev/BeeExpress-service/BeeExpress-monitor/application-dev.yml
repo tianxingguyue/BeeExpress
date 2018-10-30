@@ -1,0 +1,19 @@
+spring:
+  rabbitmq:
+      host: 192.168.1.118 # 在hosts文件中配置地址
+      port: 5672
+      username: admin
+      password: admin
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
+      turbine:
+        clusters: default
+        location: http://monitor.BeeExpress.com:${turbine.stream.port}
+#      context-path: ${management.context-path}
+#      notify:      # 加了通知后，spring-boot-admin 通过/health验证当前项目是否
+#        mail:
+#          to: aaa@qq.com
+#          from: xxx@163.com
+#          ignore-changes: UNKNOWN:UP
