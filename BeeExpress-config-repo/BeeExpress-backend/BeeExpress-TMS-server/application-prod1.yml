@@ -56,10 +56,10 @@ bee:
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: 172.21.247.52     # 根据环境更改
+    host: rm-t4nez14383p79rq04.mysql.singapore.rds.aliyuncs.com             # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: Bee2w3e4r5t
+    password: Bee^6&7*8
 swagger2:
   package: com.BeeExpress.tms.controller
   service:

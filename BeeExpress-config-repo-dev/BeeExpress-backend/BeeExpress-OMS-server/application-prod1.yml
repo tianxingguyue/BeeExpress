@@ -5,7 +5,7 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     prefer-ip-address: true
-    status-page-url: http://gateway.BeeExpress.com:9770/api/oms/swagger-ui.html
+    status-page-url: http://gateway.bee-express.co.th.:9770/api/oms/swagger-ui.html
 #    hostname: ${eureka.hostname:eureka.BeeExpress.com}    # 指定该Eureka实例的主机名
     metadata-map:
       user.name: ${security.user.name}
@@ -14,12 +14,12 @@ eureka:
 
 spring:
   rabbitmq:
-      host: 192.168.1.118
+      host: 172.21.247.52
       port: 5672
       password: admin
       username: admin
   redis:
-    host: 192.168.1.118
+    host: 172.21.247.52
     port: 6379
     password: Bee@9394
     pool:
@@ -27,7 +27,7 @@ spring:
       min-idle: 2
       max-idle: 8
       max-wait: 100
-    key-prefix: dev
+    key-prefix: prod1
   sleuth:
     sampler:
       percentage: 1
@@ -56,10 +56,10 @@ bee:
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: 192.168.1.128     # 根据环境更改
+    host: 172.21.247.52     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: Bee123456
+    password: Bee2w3e4r5t
 swagger2:
   package: com.BeeExpress.oms.controller
   service:

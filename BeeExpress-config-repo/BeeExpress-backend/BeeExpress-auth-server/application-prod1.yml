@@ -3,7 +3,7 @@ server:
 
 
   redis:
-      key-prefix: dev
+      key-prefix: prod1
       host: 172.21.247.52
       password: Bee@9394
       pool:
@@ -38,10 +38,10 @@ bee:
       url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
       username: ${bee.mysql.username}
     driverClassName: com.mysql.jdbc.Driver
-    host: 172.21.247.52             # 根据环境更改
+    host: rm-t4nez14383p79rq04.mysql.singapore.rds.aliyuncs.com             # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: Bee2w3e4r5t
+    password: Bee^6&7*8
 
 eureka:
   instance:
