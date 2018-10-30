@@ -5,7 +5,7 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: prod1
   application:
     name: BeeExpress-TMS-server
   jackson:
