@@ -3,14 +3,14 @@ server:
 
 spring:
   redis:
-    key-prefix: dev  # redis key的前缀， 环境的多个实例一定要配置一样（即prod1和prod2文件中需要配置一致）
+    key-prefix: prod1  # redis key的前缀， 环境的多个实例一定要配置一样（即prod1和prod2文件中需要配置一致）
   rabbitmq:
-      host: 172.21.247.52
+      host: 47.74.214.252
       port: 5672
       password: admin
       username: admin
   redis:
-    host: 172.21.247.52
+    host: 47.74.214.252
     port: 6379
     password: Bee@9394
     pool:
@@ -18,7 +18,7 @@ spring:
       min-idle: 2
       max-idle: 8
       max-wait: 100
-    key-prefix: dev
+    key-prefix: prod1
   sleuth:
     sampler:
       percentage: 1

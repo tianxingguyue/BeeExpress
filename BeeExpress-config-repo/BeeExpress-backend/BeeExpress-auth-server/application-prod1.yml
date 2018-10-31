@@ -4,7 +4,7 @@ server:
 
   redis:
       key-prefix: prod1
-      host: 172.21.247.52
+      host: 47.74.214.252
       password: Bee@9394
       pool:
         max-active: 100
@@ -12,7 +12,7 @@ server:
         max-idle: 8
         max-wait: 100
   rabbitmq:
-    host: 172.21.247.52
+    host: 47.74.214.252
     port: 5672
     password: admin
     username: admin
@@ -48,7 +48,7 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     preferIpAddress: true
-    status-page-url: http://172.21.247.49:9770/api/auth/swagger-ui.html
+    status-page-url: http://47.74.213.56:9770/api/auth/swagger-ui.html
     ip-address: 127.0.0.1
     metadata-map:
       user.name: ${security.user.name}
