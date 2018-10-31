@@ -1,7 +1,7 @@
 server:
   port: 9775
 
-
+spring:
   redis:
       key-prefix: prod1
       host: redis.bee-express.co.th.
