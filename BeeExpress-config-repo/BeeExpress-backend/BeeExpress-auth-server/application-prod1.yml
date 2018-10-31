@@ -4,7 +4,7 @@ server:
 
   redis:
       key-prefix: prod1
-      host: 47.74.214.252
+      host: redis.bee-express.co.th.
       password: Bee@9394
       pool:
         max-active: 100
