@@ -5,7 +5,7 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     prefer-ip-address: true
-    status-page-url: http://gateway.bee-express.co.th.:9770/api/oms/swagger-ui.html
+    status-page-url: http://172.21.247.49:9770/api/oms/swagger-ui.html
 #    hostname: ${eureka.hostname:eureka.BeeExpress.com}    # 指定该Eureka实例的主机名
     metadata-map:
       user.name: ${security.user.name}
