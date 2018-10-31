@@ -59,7 +59,7 @@ bee:
     host: rm-t4nez14383p79rq04.mysql.singapore.rds.aliyuncs.com     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: Bee^6&7*8
+    password: Bee!@#$%qwert
 swagger2:
   package: com.BeeExpress.ucp.controller
   service:
