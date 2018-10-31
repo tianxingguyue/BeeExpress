@@ -56,7 +56,7 @@ bee:
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: rm-t4nez14383p79rq04to.mysql.singapore.rds.aliyuncs.com             # 根据环境更改
+    host: rm-t4nez14383p79rq04.mysql.singapore.rds.aliyuncs.com             # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
     password: Bee^6&7*8
