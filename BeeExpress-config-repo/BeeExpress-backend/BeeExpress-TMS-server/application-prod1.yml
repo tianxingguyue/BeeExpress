@@ -14,12 +14,12 @@ eureka:
 
 spring:
   rabbitmq:
-      host: 47.74.214.252
+      host: 172.21.247.52
       port: 5672
       password: admin
       username: admin
   redis:
-    host: 47.74.214.252
+    host: 172.21.247.52
     port: 6379
     password: Bee@9394
     pool:

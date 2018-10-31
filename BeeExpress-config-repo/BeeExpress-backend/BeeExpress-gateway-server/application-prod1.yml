@@ -5,12 +5,12 @@ spring:
   redis:
     key-prefix: prod1  # redis key的前缀， 环境的多个实例一定要配置一样（即prod1和prod2文件中需要配置一致）
   rabbitmq:
-      host: 47.74.214.252
+      host: 172.21.247.52
       port: 5672
       password: admin
       username: admin
   redis:
-    host: 47.74.214.252
+    host: 172.21.247.52
     port: 6379
     password: Bee@9394
     pool:

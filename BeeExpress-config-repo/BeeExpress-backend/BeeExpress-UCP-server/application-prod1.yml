@@ -5,7 +5,7 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     prefer-ip-address: true
-    status-page-url: http://47.74.213.56:9770/api/ucp/swagger-ui.html
+    status-page-url: http://172.21.247.49:9770/api/ucp/swagger-ui.html
 #    hostname: ${eureka.hostname:eureka.BeeExpress.com}    # 指定该Eureka实例的主机名
     metadata-map:
       user.name: ${security.user.name}
@@ -14,12 +14,12 @@ eureka:
 
 spring:
   rabbitmq:
-      host: 47.74.214.252
+      host: 172.21.247.52
       port: 5672
       password: admin
       username: admin
   redis:
-    host: 47.74.214.252
+    host: 172.21.247.52
     port: 6379
     password: Bee@9394
     pool:
