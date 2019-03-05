@@ -14,6 +14,7 @@ spring:
     default-property-inclusion: non_null
 
 
+
 management:
   security:
     enabled: true
