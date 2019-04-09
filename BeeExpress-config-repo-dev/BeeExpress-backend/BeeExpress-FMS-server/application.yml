@@ -1,40 +1,24 @@
-info:
-  artifact: BeeExpress-file-server
-  name: '@project.name@'
-  description: '@project.description@'
-  version: '@project.version@'
-  spring-boot-version: '@spring.boot.version@'
-  spring-cloud-version: '@spring.cloud.version@'
 
-
-
-# 端口号
 server:
-  port: 9755
+  port: 9905
 
 
-
-# bean 转换
-dozer:
-  mappingFiles: classpath*:dozer/*.dozer.xml
-
-# spring配置
 spring:
-  application:
-    name: BeeExpress-file-server
   profiles:
     active: dev
-  http:
-    multipart:
-      max-file-size: 2000Mb      # Max file size，默认1M
-      max-request-size: 2500Mb   # Max request size，默认10M
+  application:
+    name: BeeExpress-FMS-server
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
 
 
-# actuator端点 以及 actuator端点的权限
 management:
   security:
     enabled: true
   context-path: /bee
+
 security:
   basic:
     enabled: true
@@ -47,9 +31,21 @@ endpoints:
     enabled: true
     sensitive: true  # actuator的health接口是否需要安全保证
 
-feign:
-  hystrix:
+dozer:
+  mappingFiles: classpath*:dozer/*.dozer.xml
+
+#feign:
+#  hystrix:
+#    enabled: true
+
+ribbon:
+  eureka:
     enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: false
 
 hystrix:
   config:
@@ -64,7 +60,6 @@ hystrix:
 
 
 
-# 认证客服端配置
 auth:
   serviceId: BeeExpress-auth-server
   app:
@@ -72,15 +67,21 @@ auth:
     pub-key:
       path: app/pub.key
   client:
-    id: BeeExpress-file-server
+    id: BeeExpress-FMS-server
     secret: 123456
     token-header: token
     admin-header: _isAdmin
     pub-key:
       path: client/pub.key
 
- # id生成器机器掩码
 id-generator:
-  machine-code: 1
+  machine-code: 1  # id生成器机器掩码
+
+
+pagehelper:
+  dialect: com.github.pagehelper.dialect.helper.MySqlDialect
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
 
 

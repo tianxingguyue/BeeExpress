@@ -1,7 +1,7 @@
 server:
   port: 9775
 
-
+spring:
   redis:
       key-prefix: prod1
       host: 172.21.247.52
@@ -25,12 +25,16 @@ server:
       name: ${spring.application.name}
 #    rabbitmq:
 #      queue: zipkin
+  http:
+    multipart:
+      max-file-size: 2000Mb      # Max file size，默认1M
+      max-request-size: 2500Mb   # Max request size，默认10M
 
 
 bee:
   mysql:
     admin:
-      database: BeeExpress       # 根据环境更改
+      database: beeexpress_ucp       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
@@ -38,18 +42,18 @@ bee:
       url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
       username: ${bee.mysql.username}
     driverClassName: com.mysql.jdbc.Driver
-    host: 172.21.247.52             # 根据环境更改
+    host: rm-t4nez14383p79rq04.mysql.singapore.rds.aliyuncs.com             # 根据环境更改
     port: 3306                  # 根据环境更改
-    username: root              # 根据环境更改
-    password: Bee2w3e4r5t
+    username: bee_express              # 根据环境更改
+    password: Bee#@!zxcJk*&l
 
 eureka:
   instance:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     preferIpAddress: true
-    status-page-url: http://gateway.bee-express.co.th.:9770/api/auth/swagger-ui.html
-    ip-address: 127.0.0.1
+    status-page-url: http://172.21.247.49:9770/api/auth/swagger-ui.html
+    ip-address: 172.21.247.49
     metadata-map:
       user.name: ${security.user.name}
       user.password: ${security.user.password}

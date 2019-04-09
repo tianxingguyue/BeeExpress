@@ -1,13 +1,13 @@
 
 server:
-  port: 9765
+  port: 9895
 
 
 spring:
   profiles:
     active: dev
   application:
-    name: BeeExpress-admin-server
+    name: BeeExpress-openapi-server
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -34,9 +34,18 @@ endpoints:
 dozer:
   mappingFiles: classpath*:dozer/*.dozer.xml
 
-feign:
-  hystrix:
+#feign:
+#  hystrix:
+#    enabled: true
+
+ribbon:
+  eureka:
     enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: false
 
 hystrix:
   config:
@@ -49,21 +58,6 @@ hystrix:
           thread:
             timeoutInMilliseconds: 10000
 
-
-
-auth:
-  serviceId: BeeExpress-auth-server
-  app:
-    token-header: token # 其三方应用token
-    pub-key:
-      path: app/pub.key
-  client:
-    id: BeeExpress-admin-server
-    secret: 123456
-    token-header: token
-    admin-header: _isAdmin
-    pub-key:
-      path: client/pub.key
 
 id-generator:
   machine-code: 1  # id生成器机器掩码

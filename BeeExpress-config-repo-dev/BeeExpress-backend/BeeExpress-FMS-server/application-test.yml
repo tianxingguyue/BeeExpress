@@ -1,11 +1,11 @@
 server:
-  port: 9885
+  port: 9905
 eureka:
   instance:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     prefer-ip-address: true
-    status-page-url: http://172.21.55.162:9770/api/oms/swagger-ui.html
+    status-page-url: http://172.21.55.162:9770/api/fms/swagger-ui.html
     ip-address: 172.21.55.162
     #    hostname: ${eureka.hostname:eureka.BeeExpress.com}    # 指定该Eureka实例的主机名
     metadata-map:
@@ -53,7 +53,7 @@ spring:
 bee:
   mysql:
     admin:
-      database: BeeExpress_oms       # 根据环境更改
+      database: BeeExpress_fms       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
@@ -67,11 +67,11 @@ bee:
     username: bee_express              # 根据环境更改
     password: Bee#@!zxcJk*&l
 swagger2:
-  package: com.BeeExpress.oms.controller
+  package: com.BeeExpress.fms.controller
   service:
-    name: admin 后台管理 服务
-    description: 后台管理服务
+    name: 财务模块
+    description: 财务模块
     contact:
-      name: 最后
+      name: 财务模块
       url: http://www.BeeExpress.com/
       email: tangstruggle@sina.com

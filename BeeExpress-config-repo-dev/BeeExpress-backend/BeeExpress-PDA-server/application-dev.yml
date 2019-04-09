@@ -44,6 +44,11 @@ spring:
       name: ${spring.application.name}
 #    rabbitmq:
 #      queue: zipkin
+  http:
+    multipart:
+      max-file-size: 2000Mb      # Max file size，默认1M
+      max-request-size: 2500Mb   # Max request size，默认10M
+
 bee:
   mysql:
     admin:
@@ -52,7 +57,7 @@ bee:
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
       port: ${bee.mysql.port}
-      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
+      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&allowMultiQueries=true&characterEncoding=utf8&useUnicode=true&useSSL=false
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x

@@ -90,6 +90,12 @@ zuul:
     msgs:
       path: /msgs/**
       serviceId: BeeExpress-msgs-server
+    openapi:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
+      path: /openapi/**
+      serviceId: BeeExpress-openapi-server
+    fms:  # 其中 admin 是路由名称，可以随便定义，但是path和service-id需要一一对应
+      path: /fms/**
+      serviceId: BeeExpress-FMS-server
 
 # 网关忽略拦截前缀（自定义）
 gateway:

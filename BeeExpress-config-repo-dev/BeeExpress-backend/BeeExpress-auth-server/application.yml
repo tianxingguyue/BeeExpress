@@ -62,7 +62,7 @@ endpoints:
 
 jwt:
   token-header: token # 其三方应用token
-  expire: 7200
+  expire: 3600
   pri-key: #   私钥
     path: app/pri.key
   pub-key:
@@ -73,7 +73,7 @@ client:
   secret: 123456
   token-header: token
   admin-header: _isAdmin
-  expire: 7200
+  expire: 3600
   pri-key: # client 私钥
     path: client/pri.key
   pub-key:

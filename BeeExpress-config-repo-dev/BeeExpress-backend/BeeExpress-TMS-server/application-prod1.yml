@@ -5,7 +5,8 @@ eureka:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     prefer-ip-address: true
-    status-page-url: http://gateway.bee-express.co.th.:9770/api/tms/swagger-ui.html
+    status-page-url: http://172.21.247.49:9770/api/tms/swagger-ui.html
+    ip-address: 172.21.247.49
 #    hostname: ${eureka.hostname:eureka.BeeExpress.com}    # 指定该Eureka实例的主机名
     metadata-map:
       user.name: ${security.user.name}
@@ -44,22 +45,27 @@ spring:
       name: ${spring.application.name}
 #    rabbitmq:
 #      queue: zipkin
+  http:
+    multipart:
+      max-file-size: 2000Mb      # Max file size，默认1M
+      max-request-size: 2500Mb   # Max request size，默认10M
+
 bee:
   mysql:
     admin:
-      database: BeeExpress_tms       # 根据环境更改
+      database: beeexpress_tms       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
       port: ${bee.mysql.port}
-      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false
+      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&allowMultiQueries=true&characterEncoding=utf8&useUnicode=true&useSSL=false
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: 172.21.247.52     # 根据环境更改
+    host: rm-t4nez14383p79rq04.mysql.singapore.rds.aliyuncs.com             # 根据环境更改
     port: 3306                  # 根据环境更改
-    username: root              # 根据环境更改
-    password: Bee2w3e4r5t
+    username: bee_express              # 根据环境更改
+    password: Bee#@!zxcJk*&l
 swagger2:
   package: com.BeeExpress.tms.controller
   service:

@@ -2,38 +2,39 @@ server:
   port: 9775
 
 spring:
-  profiles:
-    active: test
-
   redis:
-      key-prefix: test
-      host: 192.168.1.118
-      password: Bee@9394
-      pool:
-        max-active: 100
-        min-idle: 2
-        max-idle: 8
-        max-wait: 100
+    key-prefix: test
+    host: 127.0.0.1
+    password: Bee@9394
+    pool:
+      max-active: 100
+      min-idle: 2
+      max-idle: 8
+      max-wait: 100
   rabbitmq:
-    host: 192.168.1.118
+    host: 127.0.0.1
     port: 5672
     password: admin
     username: admin
   zipkin:
-#    base-url: http://BeeExpress-zipkin:8510
+    #    base-url: http://BeeExpress-zipkin:8510
     locator:
       discovery:
         enabled: true
     service:
       name: ${spring.application.name}
-#    rabbitmq:
-#      queue: zipkin
- 
+  #    rabbitmq:
+  #      queue: zipkin
+  http:
+    multipart:
+      max-file-size: 2000Mb      # Max file size，默认1M
+      max-request-size: 2500Mb   # Max request size，默认10M
+
 
 bee:
   mysql:
     admin:
-      database: BeeExpressTest       # 根据环境更改
+      database: beeexpress_ucp       # 根据环境更改
       driverClassName: ${bee.mysql.driverClassName}
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
@@ -41,17 +42,17 @@ bee:
       url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true
       username: ${bee.mysql.username}
     driverClassName: com.mysql.jdbc.Driver
-    host: 192.168.1.128             # 根据环境更改
+    host: 127.0.0.1             # 根据环境更改
     port: 3306                  # 根据环境更改
-    username: root              # 根据环境更改
-    password: Bee123456
+    username: bee_express              # 根据环境更改
+    password: Bee#@!zxcJk*&l
 
 eureka:
   instance:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
     preferIpAddress: true
-    status-page-url: http://192.168.1.118:9770/api/auth/swagger-ui.html
+    status-page-url: http://127.0.0.1:9770/api/auth/swagger-ui.html
     ip-address: 127.0.0.1
     metadata-map:
       user.name: ${security.user.name}

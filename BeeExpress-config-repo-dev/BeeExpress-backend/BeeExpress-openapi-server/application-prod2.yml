@@ -1,5 +1,5 @@
 server:
-  port: 9767
+  port: 9895
 
 logging:
   level:
@@ -22,7 +22,7 @@ spring:
 BeeExpress:
   mysql:
     admin:
-      database: BeeExpress_admin_prod       # 根据环境更改
+      database: BeeExpress_openapi_prod       # 根据环境更改
     host: BeeExpress.mysql.host     # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改

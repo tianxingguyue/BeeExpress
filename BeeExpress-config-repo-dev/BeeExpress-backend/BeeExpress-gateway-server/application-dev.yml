@@ -2,8 +2,6 @@ server:
   port: 9770
 
 spring:
-  redis:
-    key-prefix: dev  # redis key的前缀， 环境的多个实例一定要配置一样（即prod1和prod2文件中需要配置一致）
   rabbitmq:
       host: 192.168.1.118
       port: 5672
@@ -18,7 +16,7 @@ spring:
       min-idle: 2
       max-idle: 8
       max-wait: 100
-    key-prefix: dev
+    key-prefix: dev # redis key的前缀， 环境的多个实例一定要配置一样（即prod1和prod2文件中需要配置一致）
   sleuth:
     sampler:
       percentage: 1

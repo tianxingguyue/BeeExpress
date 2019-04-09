@@ -14,14 +14,14 @@ eureka:
 
 spring:
   rabbitmq:
-      host: 192.168.1.118
+      host: localhost
       port: 5672
       password: admin
       username: admin
   redis:
-    host: 192.168.1.118
+    host: localhost
     port: 6379
-    password: Bee@9394
+    password: 123456
     pool:
       max-active: 20
       min-idle: 2
@@ -44,6 +44,11 @@ spring:
       name: ${spring.application.name}
 #    rabbitmq:
 #      queue: zipkin
+  http:
+    multipart:
+      max-file-size: 2000Mb      # Max file size，默认1M
+      max-request-size: 2500Mb   # Max request size，默认10M
+
 bee:
   mysql:
     admin:
@@ -52,14 +57,14 @@ bee:
       host: ${bee.mysql.host}
       password: ${bee.mysql.password}
       port: ${bee.mysql.port}
-      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false&allowMultiQueries=true
+      url: jdbc:mysql://${bee.mysql.admin.host}:${bee.mysql.admin.port}/${bee.mysql.admin.database}?serverTimezone=CTT&allowMultiQueries=true&characterEncoding=utf8&useUnicode=true&useSSL=false&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false
       username: ${bee.mysql.username}
     #driverClassName: com.mysql.cj.jdbc.Driver  # 6.0.6
     driverClassName: com.mysql.jdbc.Driver    # 5.x
-    host: 192.168.1.128     # 根据环境更改
+    host: localhost             # 根据环境更改
     port: 3306                  # 根据环境更改
     username: root              # 根据环境更改
-    password: Bee123456
+    password: root
 swagger2:
   package: com.BeeExpress.ucp.controller
   service:
@@ -69,3 +74,6 @@ swagger2:
       name: 最后
       url: http://www.BeeExpress.com/
       email: tangstruggle@sina.com
+
+download:
+  ip: http://192.168.1.118:8082/document/apk/
